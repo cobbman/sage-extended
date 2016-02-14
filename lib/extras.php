@@ -32,9 +32,23 @@ function excerpt_more() {
 }
 add_filter('excerpt_more', __NAMESPACE__ . '\\excerpt_more');
 
+
 /*
  * => Allow field visibility options in Gravity Forms
  * ---------------------------------------------------------------------------*/
 if ( defined( 'GRAVITY_MANAGER_URL' ) ) {
   add_filter( 'gform_enable_field_label_visibility_settings', '__return_true' );
 }
+
+
+/*
+ * => REMOVE PLUGIN ASSETS (and include in Manifest.json for less http req.)
+ * ---------------------------------------------------------------------------*/
+function remove_plugin_assets() {
+  // Cornerstone Plugin (icon fonts won't work if we do this. Commenting out for now.)
+  //wp_dequeue_style('cornerstone-shortcodes');      // cornerstone/assets/css/site/style.css
+  //wp_dequeue_script('cornerstone-site-head');      // cornerstone/assets/js/dist/site/cs-head.min.js
+  //wp_dequeue_script('cornerstone-site-body');      // cornerstone/assets/js/dist/site/cs-body.min.js
+  
+}
+// add_action( 'wp_enqueue_scripts', __NAMESPACE__ . '\\remove_plugin_assets', 101);
