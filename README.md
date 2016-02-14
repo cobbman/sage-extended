@@ -1,6 +1,23 @@
-# [Sage](https://roots.io/sage/)
-[![Build Status](https://travis-ci.org/roots/sage.svg)](https://travis-ci.org/roots/sage)
-[![devDependency Status](https://david-dm.org/roots/sage/dev-status.svg)](https://david-dm.org/roots/sage#info=devDependencies)
+# [Sage RELOADED](https://github.com/bigwilliam/sage-reloaded)
+Start with the roots/sage theme, and add some customizations I use. 
+
+Here's a breakdown of what I've changed:
+
+SCSS
+- custom SCSS for generating colors and classes
+- helper classes for components on mobile devices
+
+JS
+- Some functions commonly used
+
+PHP
+
+- Added a few items in functions.php
+
+
+*The rest of this is the original REAME from the roots/sage project...*
+
+------------
 
 Sage is a WordPress starter theme based on HTML5 Boilerplate, gulp, Bower, and Bootstrap Sass, that will help you make better themes.
 
