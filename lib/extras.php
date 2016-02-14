@@ -31,3 +31,10 @@ function excerpt_more() {
   return ' &hellip; <a href="' . get_permalink() . '">' . __('Continued', 'sage') . '</a>';
 }
 add_filter('excerpt_more', __NAMESPACE__ . '\\excerpt_more');
+
+/*
+ * => Allow field visibility options in Gravity Forms
+ * ---------------------------------------------------------------------------*/
+if ( defined( 'GRAVITY_MANAGER_URL' ) ) {
+  add_filter( 'gform_enable_field_label_visibility_settings', '__return_true' );
+}
