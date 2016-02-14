@@ -8,24 +8,9 @@ $sidebar-sm-columns:    4;
 // Colors
 $brand-primary:         #27ae60;
 
-//== Scaffolding
-//
-//## Settings for some of the most global styles.
-
-//** Background color for `<body>`.
-$body-bg:               #fff;
-//** Global text color on `<body>`.
-$text-color:            $gray-dark;
-
-//** Global textual link color.
-$link-color:            $brand-primary;
-//** Link hover color set via `darken()` function.
-$link-hover-color:      darken($link-color, 15%);
-//** Link hover decoration.
-$link-hover-decoration: underline;
 
 
-//== Typography
+//== Typography (COPIED FROM BOOTSTRAP VARIABLES)
 //
 //## Font, line-height, and color for body text, headings, and more.
 
