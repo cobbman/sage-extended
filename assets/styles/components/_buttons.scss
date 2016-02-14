@@ -1,0 +1,44 @@
+ /*
+ * => BUTTON MIXINS
+ * ---------------------------------------------------------------------------*/
+@mixin createButton($name, $value) {
+
+	.btn {
+
+		// transparent
+		&.transparent-#{$name} {
+			background-color: #fff;
+			color: $value;
+			border-width: 2px;
+			font-weight: bold;
+			&:hover,
+			&:focus {
+				background-color: $value;
+				border-color: $value;
+				color: #fff;
+			}
+		}
+		// solid
+		&.solid-#{$name} {
+			background-color: $value;
+			border-color: $value;
+			&:hover,
+			&:focus {
+				background-color: darken($value, 5%);
+			}
+		}
+		// hover
+		&.hover-#{$name} {
+			&:hover,
+			&:focus {
+				background-color: $value;
+				border-color: $value;
+			}
+		}
+	}
+}
+
+// Build button classes from $mainColors list in common/_variables.scss
+@each $name, $value in $mainColors {
+	@include createButton($name, $value);
+}

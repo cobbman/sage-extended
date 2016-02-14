@@ -7,3 +7,128 @@ $sidebar-sm-columns:    4;
 
 // Colors
 $brand-primary:         #27ae60;
+
+//== Scaffolding
+//
+//## Settings for some of the most global styles.
+
+//** Background color for `<body>`.
+$body-bg:               #fff;
+//** Global text color on `<body>`.
+$text-color:            $gray-dark;
+
+//** Global textual link color.
+$link-color:            $brand-primary;
+//** Link hover color set via `darken()` function.
+$link-hover-color:      darken($link-color, 15%);
+//** Link hover decoration.
+$link-hover-decoration: underline;
+
+
+//== Typography
+//
+//## Font, line-height, and color for body text, headings, and more.
+
+$font-family-sans-serif:  "Helvetica Neue", Helvetica, Arial, sans-serif;
+$font-family-serif:       Georgia, "Times New Roman", Times, serif;
+//** Default monospace fonts for `<code>`, `<kbd>`, and `<pre>`.
+$font-family-monospace:   Menlo, Monaco, Consolas, "Courier New", monospace;
+$font-family-base:        $font-family-sans-serif;
+
+$font-size-base:          18px;
+$font-size-large:         ceil(($font-size-base * 1.25)); // ~18px
+$font-size-small:         ceil(($font-size-base * 0.85)); // ~12px
+
+$font-size-h1:            floor(($font-size-base * 2.6)); // ~36px
+$font-size-h2:            floor(($font-size-base * 2.15)); // ~30px
+$font-size-h3:            ceil(($font-size-base * 1.7)); // ~24px
+$font-size-h4:            ceil(($font-size-base * 1.25)); // ~18px
+$font-size-h5:            $font-size-base;
+$font-size-h6:            ceil(($font-size-base * 0.85)); // ~12px
+
+
+
+/*
+ * => FONT VARS
+ * ---------------------------------------------------------------------------*/
+ // Declare your fonts in _fonts.scss
+
+
+// Mixin for rem font size and fallback
+@mixin font-size($sizeValue: $BaseFontSize) {
+  font-size: ($sizeValue * 10) + px;
+  font-size: $sizeValue + rem;
+}
+
+
+/*
+ * => COLOR VARS & MIXINS
+ * ---------------------------------------------------------------------------*/
+
+/* Set the main site colors here. This will be used to auto-generate classes elsewhere. */
+$mainColors: (
+	'white': #ffffff,
+	'orange':#ff6633,
+	'green': #339933,   
+	'blue':  #006699,       
+	'gray':  #333333
+);
+
+
+
+
+// return color value from given key
+@function color($key) {
+  @if map-has-key($mainColors, $key) {
+    @return map-get($mainColors, $key);
+  }
+  @warn "Unknown `#{$key}` in $colors.";
+  @return null;
+}
+
+
+
+/*
+ * => MEDIA BREAKPOINTS (in 'include-media' bower package)
+ * ---------------------------------------------------------------------------*/
+
+// How to use: http://include-media.com/#features
+
+$breakpoints: (
+  phone: 480px, 
+  tablet: 767px, 
+  tabletwide: 979px, 
+  desktop: 1200px,
+  ipadLandscape: 1024px,
+  ipadPortrait: 768px
+);
+// usage: 
+// @include media(">phone", "<=tablet") {
+//  width: 50%;
+// }
+
+
+
+/*
+ * => DEBUG
+ * ---------------------------------------------------------------------------*/
+
+// LINK: http://www.sitepoint.com/debugging-sass-maps/
+@mixin debug-map($map) {
+  @at-root {
+    @debug-map {
+      __toString__: inspect($map);
+      __length__: length($map);
+      __depth__: depth($map);
+      __keys__: map-keys($map);
+      __properties__ {
+        @each $key, $value in $map {
+          #{'(' + type-of($value) + ') ' + $key}: inspect($value);
+        }
+      }
+    }
+  }
+}
+
+@include debug-map($mainColors);
+

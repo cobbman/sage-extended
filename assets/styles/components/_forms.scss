@@ -1,4 +1,7 @@
-// Search form
+/*
+ * => SEARCH FORM
+ * ---------------------------------------------------------------------------*/
+
 .search-form {
   @extend .form-inline;
 }
@@ -12,4 +15,41 @@
 .search-form .search-submit {
   @extend .btn;
   @extend .btn-default;
+}
+
+/*
+ * => GRAVITY FORMS
+ * ---------------------------------------------------------------------------*/
+
+body .gform_wrapper input[type=text], 
+body .gform_wrapper input[type=url], 
+body .gform_wrapper input[type=email], 
+body .gform_wrapper input[type=tel], 
+body .gform_wrapper input[type=number], 
+body .gform_wrapper input[type=password], 
+body .gform_wrapper select, 
+body .gform_wrapper textarea,
+body .gform_wrapper .gfield_radio li label, 
+body .gform_wrapper .gfield_checkbox li label {
+	font-size: $font-size-base !important;
+}
+
+body .gform_wrapper .ginput_complex label, 
+body .gform_wrapper .description, 
+body .gform_wrapper .gfield_description, 
+body .gform_wrapper .gsection_description, 
+body .gform_wrapper .instruction {
+	font-size: 80% !important;
+	opacity: 1 !important;
+}
+
+body .gform_wrapper .ginput_complex label,
+body .gform_wrapper .top_label .gfield_label, 
+body .gform_wrapper .left_label .gfield_label, 
+body .gform_wrapper .right_label .gfield_label {
+	// display: none;
+}
+
+body .gform_wrapper .gfield_radio label {
+	margin-top: .4em;
 }
