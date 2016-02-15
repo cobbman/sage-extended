@@ -6,9 +6,12 @@ Here's a breakdown of what I've changed:
 SCSS
 - custom SCSS with a "MainColors" array which will auto-generate helper classes for buttons and backgrounds (see `assets/styles/common/_variables.scss`
 - helper classes for components on mobile devices
+- add sass mixing 'include-media' (bower dep)
+
 
 JS
 - Some functions commonly used
+- add readmore.js (bower dep)
 
 PHP
 
