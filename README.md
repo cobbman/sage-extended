@@ -4,7 +4,7 @@ Start with the roots/sage theme, and add some customizations I use.
 Here's a breakdown of what I've changed:
 
 SCSS
-- custom SCSS for generating colors and classes
+- custom SCSS with a "MainColors" array which will auto-generate helper classes for buttons and backgrounds (see `assets/styles/common/_variables.scss`
 - helper classes for components on mobile devices
 
 JS
@@ -12,12 +12,16 @@ JS
 
 PHP
 
-- Added a few items in functions.php
+- Added a few items in extra.php (most of my php mods are in [Base Plugin](https://github.com/bigwilliam/base-plugin), but I may consider moving them here.
 
 
 *The rest of this is the original REAME from the roots/sage project...*
 
 ------------
+
+# [Sage](https://roots.io/sage/)
+[![Build Status](https://travis-ci.org/roots/sage.svg)](https://travis-ci.org/roots/sage)
+[![devDependency Status](https://david-dm.org/roots/sage/dev-status.svg)](https://david-dm.org/roots/sage#info=devDependencies)
 
 Sage is a WordPress starter theme based on HTML5 Boilerplate, gulp, Bower, and Bootstrap Sass, that will help you make better themes.
 
