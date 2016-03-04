@@ -41,7 +41,7 @@ $font-size-h6:            ceil(($font-size-base * 0.85)); // ~12px
 
 // Mixin for rem font size and fallback
 @mixin font-size($sizeValue: $BaseFontSize) {
-  font-size: ($sizeValue * 10) + px;
+  font-size: ($sizeValue * $font-size-base);
   font-size: $sizeValue + rem;
 }
 
