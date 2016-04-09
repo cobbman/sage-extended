@@ -213,7 +213,7 @@
   }
   .admin-bar & {
     top: $narrow-offset;
-    @include media('<=mobileBreakpoint') {
+    @include media('>=mobileBreakpoint') {
       top: $wide-offset;
     }
   }
