@@ -38,7 +38,7 @@ var activateFullscreen = function() {
   // EDIT THE PARAMETERS BELOW
   // Parameter 1 is the element to become fullscreen
   // Parameter 2 is an array of other elements to subtract from the calculation (keeps them on the screen also)
-  fullscreenStuff('#fullscreenMe', ['#keepOnScreen', '#wpadminbar', '.masthead']);
+  fullscreenStuff('#fullScreenMe', ['#keepOnScreen', '#wpadminbar', '.masthead']);
 };
 activateFullscreen();
 
