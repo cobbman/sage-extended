@@ -1,24 +1,25 @@
-# [Sage RELOADED](https://github.com/bigwilliam/sage-reloaded)
+# [Sage - EXTENDED](https://github.com/bigwilliam/sage-reloaded) v 1.5
 Start with the roots/sage theme, and add some customizations I use. 
 
-Here's a breakdown of what I've changed:
+**Currently using Sage version 8.4.2**
 
-SCSS
+### What I've changed:
+
+**SCSS**
 - custom SCSS with a "MainColors" array which will auto-generate helper classes for buttons and backgrounds (see `assets/styles/common/_variables.scss`
 - helper classes for components on mobile devices
 - add sass mixing 'include-media' (bower dep)
 
 
-JS
+**JS**
 - Some functions commonly used
 - add readmore.js (bower dep)
 
-PHP
-
+**PHP**
 - Added a few items in extra.php (most of my php mods are in [Base Plugin](https://github.com/bigwilliam/base-plugin), but I may consider moving them here.
 
 
-*The rest of this is the original REAME from the roots/sage project...*
+***The rest of this is the original REAME from the roots/sage project...***
 
 ------------
 
