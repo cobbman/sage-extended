@@ -1,7 +1,7 @@
-# [Sage - EXTENDED](https://github.com/bigwilliam/sage-reloaded) v 1.5
-Start with the roots/sage theme, and add some customizations I use. 
-
+# [Sage - EXTENDED](https://github.com/bigwilliam/sage-reloaded) v1.5
 **Currently using Sage version 8.4.2**
+
+Start with the roots/sage theme, and add some customizations I use. 
 
 ### What I've changed:
 
@@ -21,7 +21,6 @@ Start with the roots/sage theme, and add some customizations I use.
 
 ------------
 ***The rest of this is the original REAME from the roots/sage project...***
-------------
 
 # [Sage](https://roots.io/sage/)
 [![Build Status](https://travis-ci.org/roots/sage.svg)](https://travis-ci.org/roots/sage)
