@@ -19,8 +19,8 @@ Start with the roots/sage theme, and add some customizations I use.
 - Added a few items in extra.php (most of my php mods are in [Base Plugin](https://github.com/bigwilliam/base-plugin), but I may consider moving them here.
 
 
+------------
 ***The rest of this is the original REAME from the roots/sage project...***
-
 ------------
 
 # [Sage](https://roots.io/sage/)
