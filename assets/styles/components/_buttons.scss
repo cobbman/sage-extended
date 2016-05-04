@@ -7,8 +7,8 @@
 
 		// transparent
 		&.transparent-#{$name} {
-			background-color: #fff;
 			color: $value;
+			border-color: $value;
 			border-width: 2px;
 			font-weight: bold;
 			&:hover,

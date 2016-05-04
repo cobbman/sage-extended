@@ -9,6 +9,7 @@ Start with the roots/sage theme, and add some customizations I use.
 - custom SCSS with a "MainColors" array which will auto-generate helper classes for buttons and backgrounds (see `assets/styles/common/_variables.scss`
 - helper classes for components on mobile devices
 - add sass mixing 'include-media' (bower dep)
+- Gravity Forms Styles (so you don't have to include GF CSS)
 
 
 **JS**

@@ -19,37 +19,170 @@
 
 /*
  * => GRAVITY FORMS
+ *
+ * Turn OFF "Output CSS" in GF settings, and turn ON HTML 5
+ *
  * ---------------------------------------------------------------------------*/
 
-body .gform_wrapper input[type=text], 
-body .gform_wrapper input[type=url], 
-body .gform_wrapper input[type=email], 
-body .gform_wrapper input[type=tel], 
-body .gform_wrapper input[type=number], 
-body .gform_wrapper input[type=password], 
-body .gform_wrapper select, 
-body .gform_wrapper textarea,
-body .gform_wrapper .gfield_radio li label, 
-body .gform_wrapper .gfield_checkbox li label {
-	font-size: $font-size-base !important;
+.gform_wrapper ul {
+  @extend .list-unstyled;
 }
 
-body .gform_wrapper .ginput_complex label, 
-body .gform_wrapper .description, 
-body .gform_wrapper .gfield_description, 
-body .gform_wrapper .gsection_description, 
-body .gform_wrapper .instruction {
-	font-size: 80% !important;
-	opacity: 1 !important;
+.gform_wrapper li {
+  @extend .form-group;
 }
 
-body .gform_wrapper .ginput_complex label,
-body .gform_wrapper .top_label .gfield_label, 
-body .gform_wrapper .left_label .gfield_label, 
-body .gform_wrapper .right_label .gfield_label {
-	// display: none;
+.gform_wrapper form {
+  margin-bottom: 0;
 }
 
-body .gform_wrapper .gfield_radio label {
-	margin-top: .4em;
+.gform_wrapper .gfield_required {
+  padding-left: 1px;
+  color: $state-danger-text;
+}
+
+.ginput_container input,
+.ginput_container select,
+.ginput_container textarea {
+  @extend .form-control;
+  background-color: white;
+}
+
+.ginput_container textarea {
+  height: auto;
+}
+
+.gform_button {
+  @extend .btn;
+  @extend .btn-primary;
+}
+
+// Hidden labels
+.hidden_label .gfield_label {
+  @extend .hidden;
+}
+
+// Errors and Validation
+
+.gform_wrapper .gfield_error {
+  .gfield_label {
+    color: $state-danger-text;
+  }
+  input,
+  select,
+  textarea {
+    border-color: $alert-danger-border;
+    background-color: $alert-danger-bg;
+    color: $alert-danger-text;
+    @include form-control-focus($alert-danger-text);
+  }
+}
+.validation_error {
+  @extend .alert;
+  @extend .alert-danger;
+}
+#gforms_confirmation_message {
+  @extend .alert;
+  @extend .alert-success;
+}
+
+.gform_confirmation_message {
+    min-height: 200px;
+    text-align: center;
+}
+
+// Hide the ajax spinner
+.gform_ajax_spinner {
+  display: none;
+}
+
+// Hide honeypot
+.gform_validation_container {
+  display: none;
+  position: absolute;
+  left: -9000px;
+}
+
+// Checkboxes
+.gfield_checkbox {
+  input[type=checkbox] {
+    width: 1em;
+    height: .95em;
+    display: inline;
+    border: none;
+    box-shadow: none;
+  }
+}
+
+//  Footer fix
+.gform_footer {
+  clear: both;
+}
+
+// READY CLASSES & Media
+
+@include media('>mobileBreakpoint') {
+  .gform_wrapper {
+
+    // 2 columns
+    .gf_left_half {
+      margin: 0 0 8px 0;
+      width: 49%;
+      float: left;
+      clear: left;
+    }
+    .gf_right_half {
+      margin: 0 0 8px 0;
+      width: 49%;
+      float: right;
+      clear: right;
+    }
+
+    // 3 columns
+    .gf_left_third,
+    .gf_middle_third,
+    .gf_right_third {
+      margin: 0 0 0.50em 0;
+      width: 32%;
+    }
+    .gf_left_third {
+      float: left;
+      clear: left;
+    }
+    .gf_middle_third {
+      float: left;
+      clear: none;
+      margin-left: 2%;
+    }
+    .gf_right_third {
+      float: right;
+      clear: right;
+    }
+
+    // for complex parts, such as addresses
+    .ginput_left {
+      width: 49%;
+      float: left;
+      clear: left;
+    }
+    .ginput_right {
+      width: 49%;
+      float: right;
+      clear: right;
+    }
+    .gf_clear, .gf_clear_complex {
+      clear: both;
+    }
+
+    // lists
+    .gf_list_inline ul.gfield_checkbox li, 
+    .gf_list_inline ul.gfield_radio li {
+      width: auto !important;
+      float: none !important;
+      margin: 0 0.625em 0.625em 0;
+      display: -moz-inline-stack;
+      display: inline-block;
+      zoom: 1;
+    }
+  }
 }
