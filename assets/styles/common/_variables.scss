@@ -80,7 +80,7 @@ $breakpoints: (
   desktop: 1200px,
   ipadLandscape: 1024px,
   ipadPortrait: 768px,
-  mediaBreakpoint: 768px
+  mobileBreakpoint: 768px
 );
 // usage: 
 // @include media(">phone", "<=tablet") {
