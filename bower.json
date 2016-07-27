@@ -9,7 +9,8 @@
   "dependencies": {
     "bootstrap-sass": "3.3.6",
     "include-media": "^1.4.2",
-    "Readmore.js": "readmore#^2.1.0"
+    "Readmore.js": "readmore#^2.1.0",
+    "font-awesome": "fontawesome#^4.6.3"
   },
   "overrides": {
     "bootstrap-sass": {
